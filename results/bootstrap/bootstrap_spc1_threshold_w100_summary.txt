@@ -1,0 +1,14 @@
+Bootstrap analysis for SPC1* threshold (w100)
+--------------------------------------------------
+Data file                  : data\final\SPC1_collapse_panel_w100.csv
+Predictor column           : SPC1
+Outcome column             : collapse_next_100y
+Observations (n)           : 102
+Bootstrap resamples (valid): 10000
+
+Observed SPC1*          : 5.030162
+Observed percentile        : 96.078431
+Bootstrap mean SPC1*    : 5.310468
+Bootstrap mean percentile  : 90.851471
+95% CI SPC1*           : [3.927196, 8.474329]
+95% CI percentile          : [61.764706, 100.000000]

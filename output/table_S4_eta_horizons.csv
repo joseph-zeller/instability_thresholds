@@ -1,0 +1,4 @@
+Horizon (Model),n,theta,percentile,auc
+η-ratio (50-year horizon),21,9.01,100.0,0.47
+η-ratio (100-year horizon),21,1.71,81.0,0.69
+η-ratio (150-year horizon),21,1.47,81.0,0.69

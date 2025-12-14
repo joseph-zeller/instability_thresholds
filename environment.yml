@@ -1,0 +1,16 @@
+name: collapse_thresholds
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - statsmodels
+  - matplotlib
+  - pyyaml
+  - jupyter
+  - pip
+  - pip:
+      - tqdm

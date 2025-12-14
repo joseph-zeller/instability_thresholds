@@ -1,0 +1,19 @@
+baseline:
+  label: "Baseline (all cases)"
+  slugs: []
+
+exclude_case_A:
+  label: "Exclude Case A (reform)"
+  slugs:
+    - "slug_for_case_A"
+
+exclude_case_B:
+  label: "Exclude Case B (boundary reclassification)"
+  slugs:
+    - "slug_for_case_B"
+
+exclude_A_and_B:
+  label: "Exclude Cases A and B"
+  slugs:
+    - "slug_for_case_A"
+    - "slug_for_case_B"

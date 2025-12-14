@@ -1,0 +1,10 @@
+AfroEurasia:
+  - "West_Eurasia"
+  - "South_Asia"
+  - "East_Asia"
+Americas:
+  - "North_America"
+  - "Mesoamerica"
+  - "South_America"
+Oceania:
+  - "Oceania"

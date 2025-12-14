@@ -1,0 +1,32 @@
+Permutation test: cross-dataset threshold percentile convergence
+
+Inputs:
+  Seshat file: C:/Users/josep/OneDrive/github/collapse_thresholds/data/final/seshat_EI_collapse_panel_w100.csv
+  SPC1 file:   C:/Users/josep/OneDrive/github/collapse_thresholds/data/final/SPC1_collapse_panel_w100.csv
+
+Distributions:
+  ETA:  n=21 min=-0.050816217522318 max=3.333747769106588
+  SPC1: n=102 min=-3.118538191164523 max=5.925080013841275
+
+Observed thresholds (CV-reported):
+  obs_eta_thresh  = 2.116612
+  obs_spc1_thresh = 5.059305
+
+Observed percentiles:
+  eta  = 95.238095
+  spc1 = 96.078431
+  diff = 0.840336
+
+Null model:
+  draws = 10000
+  seed  = 42
+  random thresholds ~ Uniform([min,max]) for each predictor
+  percentile mapping kind = weak
+
+P-values:
+  p_two_tailed (diff <= observed) = 0.044400
+  p_one_tailed (convergence)      = 0.022200
+
+Outputs:
+  null distribution CSV: C:/Users/josep/OneDrive/github/collapse_thresholds/results/robustness/permutation/permutation_threshold_alignment_w100_null.csv
+  summary TXT:           C:/Users/josep/OneDrive/github/collapse_thresholds/results/robustness/permutation/permutation_threshold_alignment_w100_summary.txt
