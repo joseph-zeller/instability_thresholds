@@ -26,25 +26,23 @@ All manuscript and SI figures and tables
 
 The workflow is designed for full computational reproducibility.
 
-Repository Structure
+## Repository Structure
 
 Key directories are organised as follows:
 
+```text
 collapse_thresholds/
-│
-├── config/                     # Configuration files (YAML)
+├── config/                      # Configuration files (YAML)
 │   ├── disputed_cases.yaml
 │   ├── horizons.yaml
 │   └── regions.yaml
-│
 ├── data/
-│   └── final/                  # Final analysis datasets (CSV)
+│   └── final/                   # Final analysis datasets (CSV)
 │       ├── seshat_EI_collapse_panel_w100.csv
 │       ├── seshat_EI_collapse_panel_w50.csv
 │       ├── SPC1_collapse_panel_w100.csv
 │       └── SPC1_collapse_panel_w100_horizons.csv
-│
-├── src/                        # All analysis code
+├── src/                         # All analysis code
 │   ├── compute_thresholds.py
 │   ├── run_all.py
 │   ├── figures/
@@ -53,23 +51,14 @@ collapse_thresholds/
 │   │   └── make_all_tables.py
 │   └── robustness/
 │       └── permutation_threshold_alignment.py
-│
-├── figures/                    # Generated figures
+├── figures/                     # Generated figures
 │   ├── manuscript/
 │   └── si/
-│
-├── output/                     # Generated SI tables (CSV + Markdown)
-│
-├── results/                    # Model outputs and robustness results
-│   ├── thresholds/
-│   ├── bootstrap/
-│   ├── robustness/
-│   │   └── permutation/
-│   └── tables/
-│
-├── environment.yml             # Reproducible Python environment
-├── README.md                   # This file
-└── REPRODUCIBILITY.md          # Step-by-step replication guide
+├── output/                      # Generated SI tables (CSV + Markdown)
+├── results/                     # Model outputs and robustness results
+├── environment.yml              # Reproducible Python environment
+├── README.md
+└── REPRODUCIBILITY.md
 
 Software Environment
 
