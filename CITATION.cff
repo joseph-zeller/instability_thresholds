@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite it as below."
+title: "Collapse Thresholds: Reproducible Code and Data for Identifying Convergent Percentile Instability Thresholds"
+type: software
+authors:
+  - family-names: "Zeller"
+    given-names: "Joseph"
+    email: "joseph.zeller@anu.edu.au"
+    affiliation: "Australian National University"
+year: 2025
+doi: "10.5281/zenodo.17932910"
+repository-code: "https://github.com/joseph-zeller/collapse_thresholds"
+url: "https://doi.org/10.5281/zenodo.17932910"
+license: "MIT"
+keywords:
+  - historical collapse
+  - complex systems
+  - instability thresholds
+  - Seshat
+  - structural-demographic theory
+  - reproducibility
+preferred-citation:
+  type: software
+  authors:
+    - family-names: "Zeller"
+      given-names: "Joseph"
+      affiliation: "Australian National University"
+  title: "Collapse Thresholds: Reproducible Code and Data for Identifying Convergent Percentile Instability Thresholds"
+  year: 2025
+  doi: "10.5281/zenodo.17932910"
+  url: "https://doi.org/10.5281/zenodo.17932910"
