@@ -2,7 +2,8 @@ name: collapse_thresholds
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
+# Tested with Python 3.13.9
+  - python=3.13
   - numpy
   - pandas
   - scipy
