@@ -39,7 +39,7 @@ PANEL_PATH = REPO_ROOT / "data" / "final" / "seshat_EI_collapse_panel_w100.csv"
 THRESH_SUMMARY_PATH = REPO_ROOT / "results" / "thresholds" / "threshold_cv_summary_w100.csv"
 
 # Put S4 alongside other tables
-OUT_DIR = REPO_ROOT / "tables"
+OUT_DIR = REPO_ROOT / "output"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 OUT_CSV = OUT_DIR / "table_S4_eta_horizons.csv"
