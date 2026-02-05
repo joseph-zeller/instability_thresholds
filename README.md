@@ -1,124 +1,115 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17932910.svg)](https://doi.org/10.5281/zenodo.17932910)
 
-Collapse Thresholds
+Instability Thresholds in Large-Scale Human Systems
 
-Reproducible code and data for identifying a convergent percentile instability threshold preceding societal collapse
+Reproducible code and data for identifying convergent instability thresholds and nonlinear regime transitions in large-scale human systems.
 
-This repository provides the full computational workflow required to reproduce the results reported in:
+This repository accompanies the paper:
 
-Collapse Beyond Extreme Internal Stress: Convergent Percentile Thresholds in Pre-modern Societies
+Threshold Instability in Large-Scale Human Systems: Quantitative Evidence for Collapse Beyond Extreme Complexity
 
-All analyses, figures, tables, and robustness checks reported in the manuscript and Supplementary Information (SI) are generated programmatically from version-controlled source code contained in this repository.
+It provides fully reproducible computational pipelines for estimating regime-transition thresholds associated with systemic breakdown across independent historical datasets.
 
-Overview
+📌 Overview
 
-The repository implements a unified analytical pipeline to identify and validate a convergent percentile threshold of internal stress preceding societal collapse across independent historical datasets.
+Complex societies accumulate internal structural and informational load as they grow. This project tests whether large-scale societal breakdown is reliably preceded by a universal high-stress instability regime.
 
-Specifically, it reproduces:
+Using independent representations of internal systemic stress, the analysis:
 
-Threshold estimation using cross-validated logistic models
+Estimates nonlinear regime-transition thresholds via logistic models
 
-Percentile-based instability thresholds
+Locates thresholds using scale-free percentile methods
 
-Robustness checks across weighting schemes, horizons, and exclusions
+Tests robustness across temporal horizons, stratifications, and exclusions
 
-Cross-dataset permutation tests for threshold convergence
+Evaluates cross-predictor convergence via permutation inference
 
-All manuscript and SI figures and tables
+Results demonstrate consistent threshold convergence in the extreme upper tail of internal stress distributions, indicating a universal instability regime preceding collapse.
 
-The workflow is designed for full computational reproducibility.
-
-## Repository Structure
-
-Key directories are organised as follows:
-
-```text
-collapse_thresholds/
-├── config/                      # Configuration files (YAML)
-│   ├── disputed_cases.yaml
-│   ├── horizons.yaml
-│   └── regions.yaml
-├── data/
-│   └── final/                   # Final analysis datasets (CSV)
-│       ├── seshat_EI_collapse_panel_w100.csv
-│       ├── seshat_EI_collapse_panel_w50.csv
-│       ├── SPC1_collapse_panel_w100.csv
-│       └── SPC1_collapse_panel_w100_horizons.csv
-├── src/                         # All analysis code
-│   ├── compute_thresholds.py
-│   ├── run_all.py
-│   ├── figures/
-│   │   └── make_all_figures.py
-│   ├── tables/
-│   │   └── make_all_tables.py
-│   └── robustness/
-│       └── permutation_threshold_alignment.py
-├── figures/                     # Generated figures
-│   ├── manuscript/
-│   └── si/
-├── output/                      # Generated SI tables (CSV + Markdown)
-├── results/                     # Model outputs and robustness results
-├── environment.yml              # Reproducible Python environment
+📂 Repository Structure
+instability_thresholds/
+│
+├── config/                 # Model configuration files
+├── data/final/             # Cleaned datasets used in analysis
+├── results/                # Model outputs and threshold estimates
+├── figures/                # Generated figures for manuscript & SI
+├── output/
+│   └── tables/             # Reproducible SI tables (CSV + Markdown)
+├── src/
+│   ├── tables/             # Table generation scripts
+│   └── run_all.py          # End-to-end reproducibility pipeline
 ├── README.md
-└── REPRODUCIBILITY.md
+├── REPRODUCIBILITY.md
+└── environment.yml
 
-Software Environment
+📊 Data Sources
 
-All analyses were executed using the following environment:
+This analysis integrates independent historical datasets:
 
-Python: 3.13.9
+Seshat Equinox (2020) — institutional and social complexity indicators
 
-Operating system: OS-independent (tested on Windows)
+MOROS — independent catalogues of large-scale political regime breakdown
 
-A fully specified conda environment is provided:
+SPC1 dataset — structural-demographic pressure proxy
 
-environment.yml
+All cleaned datasets used in the paper are provided in data/final/.
 
+⚙️ Reproducibility
 
-This file pins all required dependencies and versions.
+All results in the manuscript and Supplementary Information can be regenerated from raw inputs using the provided environment.
 
-Reproducing the Results
+1. Create environment
+conda env create -f environment.yml
+conda activate instability_thresholds
 
-A complete, step-by-step replication guide is provided in:
-
-REPRODUCIBILITY.md
-
-
-At a high level, reproduction proceeds as follows:
-
-Create and activate the conda environment
-
-Run the full pipeline via:
-
+2. Run full pipeline
 python src/run_all.py
 
 
-Generated outputs will populate:
+This will:
 
-figures/ (manuscript + SI figures)
+Recompute all model fits
 
-output/ (SI tables)
+Generate threshold estimates
 
-results/ (thresholds, robustness, permutation tests)
+Produce all robustness tables
 
-No manual intervention is required once the pipeline is launched.
+Recreate manuscript figures
 
-Data Sources
+3. Generate SI tables only
+python src/tables/make_all_tables.py
 
-The analysis draws on harmonised historical datasets including:
 
-Seshat Global History Databank (internal stress and institutional variables)
+Outputs are written to:
 
-MOROS (Mortality of States Database) for collapse event validation
+output/tables/
 
-All datasets used in the analyses are included in data/final/ in processed form suitable for replication.
 
-License
+in both CSV and Markdown format for direct manuscript inclusion.
 
-This repository is released under the MIT License, permitting reuse with attribution.
+📈 Core Methods
 
-Contact
+Logistic regime-transition modelling
 
-For questions regarding the code or analyses, please refer to the manuscript or open an issue in this repository.
+Percentile-based threshold localisation
 
-Last updated: 2025-12-15
+Cross-validated discrimination (AUC)
+
+Robustness checks across:
+
+temporal horizons
+
+influential-case exclusions
+
+population stratification
+
+independent predictor convergence
+
+Permutation inference for threshold alignment
+
+📜 License
+
+MIT License — open for reuse and extension with attribution.
+
+📖 Citation
+
+If you use this code or data, please cite the accompanying paper (citation details to be added upon publication).

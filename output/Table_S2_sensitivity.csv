@@ -1,6 +1,0 @@
-Model,n,eta_star_fixed,percentile,AUC
-Baseline (all cases),21,2.116612,95.23809523809523,0.6298076923076923
-Exclude Case A (New Egyptian Kingdom),19,2.116612,95.23809523809523,0.6136363636363636
-Exclude Case B (Maximum η-ratio polity),20,2.116612,95.23809523809523,0.7135416666666666
-Exclude Case C (Nearest-to-threshold polity),18,2.116612,95.23809523809523,0.5625
-Exclude Cases A–C,15,2.116612,95.23809523809523,0.7685185185185186

@@ -1,101 +1,260 @@
-Reproducibility Statement
-
-This repository provides the complete computational workflow required to reproduce the results reported in:
-
-Collapse Beyond Extreme Internal Stress: Convergent Percentile Thresholds in Pre-modern Societies
-
-All analyses, figures, tables, and robustness checks reported in the manuscript and Supplementary Information (SI) are generated programmatically from version-controlled source code contained in this repository.
-
-Computational Environment
-
-All analyses were executed using:
-
-Python version: 3.13.9
-
-Operating system: Platform-independent (tested on Windows)
-
-Random seeds: Fixed where applicable to ensure exact reproducibility
-
-Required Python packages are standard scientific libraries (e.g., numpy, pandas, scikit-learn, matplotlib). No proprietary software is required.
-
-Repository Structure
-
-Key directories are organised as follows:
-
-config/          # Analysis configuration files (horizons, regions, disputed cases)
-data/final/      # Final, analysis-ready datasets used in all computations
-src/             # All source code for analysis, figures, tables, and robustness checks
-figures/         # Generated manuscript and SI figures
-output/          # Generated SI tables and formatted table outputs
-results/         # Intermediate and diagnostic results (thresholds, bootstrap, robustness)
-
-Configuration Files (config/)
-
-YAML files specifying analytic parameters used across robustness analyses:
-
-horizons.yaml – temporal window definitions
-
-regions.yaml – regional groupings
-
-disputed_cases.yaml – historically disputed collapse cases
-
-Data (data/final/)
-
-Contains the harmonised, analysis-ready collapse panels derived from Seshat and MOROS data sources. These files constitute the sole data inputs used by the analysis scripts.
-
-Reproducing the Results
-
-All results reported in the manuscript and SI can be reproduced by running a single command from the repository root:
-
-python src/run_all.py
+Reproducibility Guide
 
 
-This script executes, in sequence:
 
-Threshold estimation (cross-validated logistic models)
-
-Robustness analyses (bootstrap and permutation tests)
-
-Table generation (SI Tables S1–S6)
-
-Figure generation (manuscript and SI figures)
-
-Outputs are written to the appropriate subdirectories (results/, output/, and figures/).
-
-Threshold Estimation
-
-Primary collapse thresholds are estimated using cross-validated logistic regression and expressed in empirical percentile space. Threshold outputs are written to:
-
-results/thresholds/
+This document describes how to reproduce all analyses, figures, and Supplementary Information tables reported in:
 
 
-For small-sample datasets (e.g., Seshat η-ratio, n = 21), percentile location rather than absolute threshold magnitude is emphasised, consistent with the manuscript and SI.
 
-Robustness Analyses
-
-Robustness checks include:
-
-Alternative window lengths
-
-Alternative variable transformations
-
-Case exclusions
-
-Bootstrap uncertainty analysis (SPC1 only)
-
-Non-parametric permutation test of cross-dataset threshold convergence
-
-Permutation test outputs supporting SI Section S1.10 are written to:
-
-results/robustness/permutation/
+Threshold Instability in Large-Scale Human Systems: Quantitative Evidence for Collapse Beyond Extreme Complexity
 
 
-The permutation test uses a fixed random seed and a one-tailed hypothesis testing unusually small percentile separation (convergence), as described in the SI.
 
-Notes on Interpretation
+All results can be regenerated from the provided datasets using the scripts in this repository.
 
-Bootstrap resampling is reported only for SPC1, where sample size permits stable inference. Bootstrap results for the smaller Seshat dataset are intentionally excluded due to statistical non-informativeness, as documented in the Supplementary Information.
 
-Citation and Use
 
-This repository is provided to support transparency and reproducibility of the associated manuscript. Users are encouraged to cite the manuscript when using or adapting the code or results.
+1\. Computational Environment
+
+
+
+All analyses were executed using Python (≥3.10).
+
+
+
+A complete environment specification is provided.
+
+
+
+Create environment
+
+conda env create -f environment.yml
+
+conda activate instability\_thresholds
+
+
+
+2\. Data Inputs
+
+
+
+All cleaned datasets used in the manuscript are located in:
+
+
+
+data/final/
+
+
+
+
+
+These include:
+
+
+
+seshat\_EI\_collapse\_panel\_w100.csv
+
+
+
+SPC1\_collapse\_panel\_w100.csv
+
+
+
+merged cross-predictor panels used for convergence tests
+
+
+
+No external downloads are required.
+
+
+
+3\. Full Reproduction Pipeline
+
+
+
+To reproduce all analyses, tables, and figures:
+
+
+
+python src/run\_all.py
+
+
+
+
+
+This script executes:
+
+
+
+Threshold estimation models
+
+
+
+Cross-validated performance metrics
+
+
+
+Robustness analyses
+
+
+
+Permutation convergence tests
+
+
+
+Figure generation
+
+
+
+Supplementary Information table creation
+
+
+
+All outputs are written to:
+
+
+
+results/
+
+figures/
+
+output/tables/
+
+
+
+4\. Supplementary Information Tables
+
+
+
+Each SI table is generated by an independent script for transparency.
+
+
+
+To regenerate all tables:
+
+
+
+python src/tables/make\_all\_tables.py
+
+
+
+
+
+Individual tables can be regenerated as:
+
+
+
+python src/tables/make\_table\_S1\_pca\_complexity.py
+
+python src/tables/make\_table\_S2\_core\_thresholds.py
+
+python src/tables/make\_table\_S3\_eta\_exclusions.py
+
+python src/tables/make\_table\_S4\_SPC1\_horizons.py
+
+python src/tables/make\_table\_S5\_eta\_horizons.py
+
+python src/tables/make\_table\_S6\_population\_strata.py
+
+python src/tables/make\_table\_S7\_cross\_predictor\_convergence.py
+
+
+
+
+
+Outputs are written to:
+
+
+
+output/tables/
+
+
+
+
+
+in both CSV and Markdown formats.
+
+
+
+5\. Randomness and Determinism
+
+
+
+All stochastic components (cross-validation splits, permutation tests) are executed with fixed random seeds to ensure bitwise reproducibility.
+
+
+
+Permutation convergence tests use:
+
+
+
+N = 100,000
+
+
+
+
+
+as reported in the manuscript.
+
+
+
+6\. Expected Runtime
+
+
+
+On a standard laptop:
+
+
+
+Component	Approximate runtime
+
+Full pipeline	2–5 minutes
+
+Permutation tests	~1 minute
+
+Table generation	<10 seconds
+
+7\. Verification
+
+
+
+Successful reproduction should yield:
+
+
+
+Identical threshold percentiles across predictors
+
+
+
+AUC values matching those reported in SI tables
+
+
+
+Convergent upper-tail instability regimes across robustness checks
+
+
+
+Minor floating-point variation (<1e-6) may occur across systems.
+
+
+
+8\. Reproducibility Philosophy
+
+
+
+This repository is designed to ensure:
+
+
+
+✔ No hidden preprocessing
+
+✔ No manual intervention
+
+✔ Transparent threshold localisation
+
+✔ Independent verification of robustness claims
+
+
+
+All manuscript claims are directly traceable to executable code.
+

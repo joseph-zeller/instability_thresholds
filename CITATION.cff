@@ -1,31 +1,41 @@
 cff-version: 1.2.0
-message: "If you use this software or data, please cite it as below."
-title: "Collapse Thresholds: Reproducible Code and Data for Identifying Convergent Percentile Instability Thresholds"
+
+title: "Instability Thresholds in Large-Scale Human Systems"
+
+message: >
+  If you use this code or data, please cite the accompanying paper.
+
 type: software
+
 authors:
-  - family-names: "Zeller"
-    given-names: "Joseph"
-    email: "joseph.zeller@anu.edu.au"
-    affiliation: "Australian National University"
-year: 2025
-doi: "10.5281/zenodo.17932910"
-repository-code: "https://github.com/joseph-zeller/collapse_thresholds"
-url: "https://doi.org/10.5281/zenodo.17932910"
-license: "MIT"
+  - family-names: Zeller
+    given-names: Joseph
+
+repository-code: "https://github.com/joseph-zeller/instability_thresholds"
+
 keywords:
-  - historical collapse
   - complex systems
   - instability thresholds
-  - Seshat
-  - structural-demographic theory
-  - reproducibility
+  - regime transitions
+  - societal collapse
+  - complexity science
+  - nonlinear dynamics
+  - historical dynamics
+  - robustness analysis
+
+abstract: >
+  Reproducible computational framework for identifying convergent instability thresholds
+  and nonlinear regime transitions in large-scale human systems using independent
+  internal-stress representations and historical datasets.
+
+license: MIT
+
 preferred-citation:
-  type: software
+  type: article
+  title: "Threshold Instability in Large-Scale Human Systems: Quantitative Evidence for Collapse Beyond Extreme Complexity"
   authors:
-    - family-names: "Zeller"
-      given-names: "Joseph"
-      affiliation: "Australian National University"
-  title: "Collapse Thresholds: Reproducible Code and Data for Identifying Convergent Percentile Instability Thresholds"
-  year: 2025
-  doi: "10.5281/zenodo.17932910"
-  url: "https://doi.org/10.5281/zenodo.17932910"
+    - family-names: Zeller
+      given-names: Joseph
+  year: 2026
+  journal: "Proceedings of the Royal Society A"
+  # doi: "TO_BE_ADDED_AFTER_PUBLICATION"

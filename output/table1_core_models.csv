@@ -1,3 +1,0 @@
-Dataset,Horizon,Predictor,n,Positives,Negatives,Pos. rate (%),θ* (Threshold),Percentile,AUC
-SPC1,100-year,SPC1,102,34,68,33.3,5.06,96.1,0.64
-Seshat,100-year,η-ratio,21,8,13,38.1,2.12,95.2,0.72

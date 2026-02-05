@@ -20,12 +20,13 @@ def main() -> None:
     tables_dir = pathlib.Path(__file__).resolve().parent
 
     scripts = [
-        "make_table1_core_models.py",
-        "make_table_S2_sensitivity.py",
-        "make_table_S3_SPC1_horizons.py",
-        "make_table_S4_eta_horizons.py",
-        "make_table_S5_popstrata.py",
-        "make_table_S6_crosspredictor.py",
+        "make_table_S1_pca_complexity.py",
+        "make_table_S2_core_thresholds.py",
+        "make_table_S3_eta_exclusions.py",
+        "make_table_S4_SPC1_horizons.py",
+        "make_table_S5_eta_horizons.py",
+        "make_table_S6_population_strata.py",
+        "make_table_S7_cross_predictor.py",
     ]
 
     print("[make_all_tables] Repo root:", repo_root)
