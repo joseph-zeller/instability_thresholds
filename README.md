@@ -26,8 +26,9 @@ Evaluates cross-predictor convergence via permutation inference
 
 Results demonstrate consistent threshold convergence in the extreme upper tail of internal stress distributions, indicating a universal instability regime preceding collapse.
 
-📂 Repository Structure
+## 📂 Repository Structure
 
+```text
 instability_thresholds/
 ├── config/                 # Model configuration files
 ├── data/final/             # Cleaned datasets used in analysis
