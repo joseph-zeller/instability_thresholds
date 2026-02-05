@@ -1,9 +1,9 @@
-name: collapse_thresholds
+name: instability_thresholds
 channels:
   - conda-forge
 dependencies:
-# Tested with Python 3.13.9
-  - python=3.13
+  # Tested with Python 3.11
+  - python=3.11
   - numpy
   - pandas
   - scipy
