@@ -1,30 +1,32 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18489850.svg)](https://doi.org/10.5281/zenodo.18489850)
 
-Instability Thresholds in Large-Scale Human Systems
+# Instability Thresholds in Large-Scale Human Systems
 
 Reproducible code and data for identifying convergent instability thresholds and nonlinear regime transitions in large-scale human systems.
 
 This repository accompanies the paper:
 
-Threshold Instability in Large-Scale Human Systems: Quantitative Evidence for Collapse Beyond Extreme Complexity
+**Threshold Instability in Large-Scale Human Systems: Quantitative Evidence for Collapse Beyond Extreme Complexity**
 
 It provides fully reproducible computational pipelines for estimating regime-transition thresholds associated with systemic breakdown across independent historical datasets.
 
-📌 Overview
+---
 
-Complex societies accumulate internal structural and informational load as they grow. This project tests whether large-scale societal breakdown is reliably preceded by a universal high-stress instability regime.
+## 📌 Overview
+
+Complex societies accumulate internal structural and informational load as they grow.  
+This project tests whether large-scale societal breakdown is reliably preceded by a universal high-stress instability regime.
 
 Using independent representations of internal systemic stress, the analysis:
 
-Estimates nonlinear regime-transition thresholds via logistic models
-
-Locates thresholds using scale-free percentile methods
-
-Tests robustness across temporal horizons, stratifications, and exclusions
-
-Evaluates cross-predictor convergence via permutation inference
+- Estimates nonlinear regime-transition thresholds via logistic models  
+- Locates thresholds using scale-free percentile methods  
+- Tests robustness across temporal horizons, stratifications, and exclusions  
+- Evaluates cross-predictor convergence via permutation inference  
 
 Results demonstrate consistent threshold convergence in the extreme upper tail of internal stress distributions, indicating a universal instability regime preceding collapse.
+
+---
 
 ## 📂 Repository Structure
 
@@ -42,7 +44,6 @@ instability_thresholds/
 ├── README.md
 ├── REPRODUCIBILITY.md
 └── environment.yml
-
 
 📊 Data Sources
 
@@ -99,15 +100,15 @@ Cross-validated discrimination (AUC)
 
 Robustness checks across:
 
-temporal horizons
+Temporal horizons
 
-influential-case exclusions
+Influential-case exclusions
 
-population stratification
+Population stratification
 
-independent predictor convergence
+Independent predictor convergence
 
-Permutation inference for threshold alignment
+Permutation inference for threshold alignment.
 
 📜 License
 
@@ -115,4 +116,4 @@ MIT License — open for reuse and extension with attribution.
 
 📖 Citation
 
-If you use this code or data, please cite the accompanying paper (citation details to be added upon publication).
+If you use this code or data, please cite the accompanying paper and the Zenodo release (see DOI badge above).
