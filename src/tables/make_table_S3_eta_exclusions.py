@@ -35,7 +35,7 @@ from sklearn.metrics import roc_auc_score
 THIS_FILE = Path(__file__).resolve()
 REPO_ROOT = THIS_FILE.parents[2]  # .../collapse_thresholds/src/tables -> repo root
 
-S2_FILE = REPO_ROOT / "tables" / "S2_core_thresholds.csv"
+S2_FILE = REPO_ROOT / "output" / "tables" / "S2_core_thresholds.csv"
 DATA_FILE = REPO_ROOT / "data" / "final" / "seshat_EI_collapse_panel_w100.csv"
 
 OUT_DIR = REPO_ROOT / "output" / "tables"
